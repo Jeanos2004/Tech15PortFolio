@@ -10,7 +10,7 @@ export default function Hero() {
             Solutions digitales innovantes pour votre entreprise
           </h1>
           <p className="text-xl mb-8">
-            Tech 15 vous aide à améliorer votre visibilité digitale avec des solutions modernes et efficaces.
+            Tech 15 vous aide à améliorer votre visibilité digitale avec des <strong className="text-orange-500 text-3xl">solutions</strong> modernes et efficaces.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link 
