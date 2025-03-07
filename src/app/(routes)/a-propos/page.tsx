@@ -17,7 +17,7 @@ export default function AboutPage() {
       
       <About />
       
-      <div className="my-16 px-12">
+      <div className="mt-16 px-12">
         <Team />
       </div>
     </div>

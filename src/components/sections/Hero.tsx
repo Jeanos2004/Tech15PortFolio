@@ -21,7 +21,7 @@ export default function Hero() {
             </Link>
             <Link 
               href="/contact" 
-              className="border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition text-center"
+              className="border-2 border-orange-500 text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 hover:border-white transition text-center"
             >
               Contactez-nous
             </Link>

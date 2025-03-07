@@ -5,20 +5,20 @@ export default function About() {
     <section className="py-16 px-12">
       <div className="container mx-auto px-4 text-gray-800">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-200">
           <div>
             <h3 className="text-2xl font-bold mb-4">Notre Mission</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-400 mb-6">
               Offrir des services de publicité digitale accessibles et performants aux entreprises de toutes tailles en combinant créativité, stratégie et technologie.
             </p>
             
             <h3 className="text-2xl font-bold mb-4">Notre Vision</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-400 mb-6">
               Devenir une référence en matière de marketing digital, en aidant nos clients à maximiser leur impact en ligne avec des stratégies publicitaires innovantes et abordables.
             </p>
             
             <h3 className="text-2xl font-bold mb-4">Nos Valeurs</h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
                 <div className="bg-orange-500 rounded-full p-1 mr-3 mt-1">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
