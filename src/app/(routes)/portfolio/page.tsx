@@ -159,7 +159,7 @@ export default function PortfolioPage() {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "L'équipe de Tech 15 a complètement transformé notre image de marque. Notre nouvelle identité visuelle a été très bien accueillie par nos clients et a contribué à une augmentation significative de notre fréquentation."
+                &ldquo;L&apos;équipe de Tech 15 a complètement transformé notre image de marque. Notre nouvelle identité visuelle a été très bien accueillie par nos clients et a contribué à une augmentation significative de notre fréquentation.&rdquo;
               </p>
             </div>
             
@@ -176,7 +176,7 @@ export default function PortfolioPage() {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "Grâce à la campagne Google Ads mise en place par Tech 15, nous avons pu acquérir de nouveaux clients à un coût très compétitif. Leur expertise en publicité digitale a été un véritable atout pour notre croissance."
+                &ldquo;Grâce à la campagne Google Ads mise en place par Tech 15, nous avons pu acquérir de nouveaux clients à un coût très compétitif. Leur expertise en publicité digitale a été un véritable atout pour notre croissance.&rdquo;
               </p>
             </div>
             
@@ -193,7 +193,7 @@ export default function PortfolioPage() {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "Mon site e-commerce développé par Tech 15 a complètement changé mon business. L'interface est intuitive et mes clients adorent l'expérience d'achat. Mes ventes en ligne ont explosé depuis le lancement."
+                &ldquo;Mon site e-commerce développé par Tech 15 a complètement changé mon business. L&apos;interface est intuitive et mes clients adorent l&apos;expérience d&apos;achat. L&apos;interface est intuitive et mes clients adorent l&apos;expérience d&apos;achat. Mes ventes en ligne ont explosé depuis le lancement.&rdquo;
               </p>
             </div>
           </div>

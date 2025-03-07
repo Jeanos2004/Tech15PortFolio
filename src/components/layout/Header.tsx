@@ -3,7 +3,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +35,7 @@ export default function Header() {
             Portfolio
           </Link>
           <Link href="/contact" className="font-medium text-gray-700 hover:text-blue-600 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
-            Contactez-nous !
+            Contact
           </Link>
         </nav>
 
