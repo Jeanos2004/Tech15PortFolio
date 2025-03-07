@@ -16,6 +16,7 @@ export default function Header() {
             <span className="font-bold text-2xl">
               <span className="text-blue-600">Tech</span>
               <span className="text-orange-500">15</span>
+              <span className="text-gray-900">Vision</span>
             </span>
           </div>
         </Link>
