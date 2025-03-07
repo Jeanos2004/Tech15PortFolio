@@ -48,21 +48,21 @@ export default function ContactPage() {
   };
   
   return (
-    <div className='bg-gray-800'>
-      <div className="bg-blue-600 text-white py-16">
+    <div className="bg-amber-50">
+      <div className=" py-24 h-96" style={{ backgroundImage: 'url(/images/pages/contact-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity : 0.9 }}>
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">Contactez-nous</h1>
-          <p className="text-xl max-w-2xl">
+          <h1 className="text-5xl font-bold mb-4">Contactez-nous !</h1>
+          <p className="text-2xl text-orange-400">
             Discutons de vos besoins et de comment nous pouvons vous aider à atteindre vos objectifs
           </p>
         </div>
       </div>
       
-      <div className="container mx-auto px-4 py-8 bg-gray-800 ">
+      <div className="container mx-auto px-4 py-16 bg-amber-50">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0">
-            <h2 className="text-3xl font-bold mb-6 text-gray-200">Parlons de votre projet</h2>
-            <p className="text-gray-400 mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">Parlons de votre projet</h2>
+            <p className="text-gray-800 mb-8">
               Que vous souhaitiez améliorer votre présence en ligne, créer une identité visuelle forte ou lancer une campagne publicitaire efficace, notre équipe est là pour vous accompagner.
             </p>
             
@@ -74,8 +74,8 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-200 mb-1">Téléphone</h3>
-                  <p className="text-gray-400">{contactData.phone}</p>
+                  <h3 className="font-bold text-gray-800 mb-1">Téléphone</h3>
+                  <p className="text-gray-800">{contactData.phone}</p>
                 </div>
               </div>
               
@@ -86,8 +86,8 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-200 mb-1">Email</h3>
-                  <p className="text-gray-400">{contactData.email}</p>
+                  <h3 className="font-bold text-gray-800 mb-1">Email</h3>
+                  <p className="text-gray-800">{contactData.email}</p>
                 </div>
               </div>
               
@@ -99,8 +99,8 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-200 mb-1">Adresse</h3>
-                  <p className="text-gray-400">{contactData.address}</p>
+                  <h3 className="font-bold text-gray-800 mb-1">Adresse</h3>
+                  <p className="text-gray-800">{contactData.address}</p>
                 </div>
               </div>
             </div>

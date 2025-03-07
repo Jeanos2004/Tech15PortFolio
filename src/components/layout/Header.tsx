@@ -34,7 +34,7 @@ export default function Header() {
           <Link href="/portfolio" className="font-medium text-gray-700 hover:text-orange-500 transition">
             Portfolio
           </Link>
-          <Link href="/contact" className="font-medium text-gray-700 hover:text-blue-600 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
+          <Link href="/contact" className="font-medium text-gray-700 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
             Contact
           </Link>
         </nav>
@@ -77,7 +77,7 @@ export default function Header() {
             <Link href="/portfolio" className="font-medium text-gray-700 hover:text-orange-500 transition">
               Portfolio
             </Link>
-            <Link href="/contact" className="font-medium text-gray-700 hover:text-blue-600 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
+            <Link href="/contact" className="font-medium text-gray-700 hover:text-blue-600 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500">
               Contact
             </Link>
           </nav>

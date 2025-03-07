@@ -15,7 +15,7 @@ export default function AboutPage() {
           </p>
         </div>
       
-      <About />
+      <About theStyle={{normal: 'text-gray-700', title: 'text-gray-900'}}/>
       
       <div className="mt-16 px-12">
         <Team />

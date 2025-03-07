@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <About />
+      <About theStyle={{normal: 'text-gray-300', title: 'text-gray-100'}}/>
       <Team /> 
     </>
   );
