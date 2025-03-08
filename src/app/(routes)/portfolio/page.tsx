@@ -75,7 +75,7 @@ const categories = [
 export default function PortfolioPage() {
   return (
     <>
-      <div className=" text-white py-16 backdrop-opacity-70" style={{backgroundImage: 'url(/images/pages/porfolio-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <div className=" text-white h-96 py-24 backdrop-opacity-70" style={{backgroundImage: 'url(/images/pages/porfolio-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Notre Portfolio</h1>
           <p className="text-xl max-w-2xl">

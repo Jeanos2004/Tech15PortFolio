@@ -11,7 +11,7 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <div className="text-white py-24" style={{backgroundImage : 'url(/images/pages/services-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <div className="text-white py-24 h-96" style={{backgroundImage : 'url(/images/pages/services-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Nos Services</h1>
           <p className="text-xl max-w-2xl">

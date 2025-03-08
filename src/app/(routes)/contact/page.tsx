@@ -16,9 +16,8 @@ export default function ContactPage() {
     service: '',
     message: '',
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null as null | 'success' | 'error');
+
+  const [submitStatus, setSubmitStatus] = useState(null as null | 'success' | 'error' | 'loading');
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -28,23 +27,40 @@ export default function ContactPage() {
     }));
   };
   
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simuler un envoi de formulaire
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: '',
+    try {
+      setSubmitStatus('loading');
+      
+      // Appel à l'API pour envoyer l'email
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1000);
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: '',
+        });
+      } else {
+        const error = await response.json();
+        console.error('Erreur lors de l\'envoi du formulaire:', error);
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi du formulaire:', error);
+      setSubmitStatus('error');
+    }
   };
   
   return (
@@ -111,8 +127,12 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold mb-6 text-gray-700">Envoyez-nous un message</h3>
               
               {submitStatus === 'success' ? (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+                <div className="bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded mb-6">
                   <p>Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.</p>
+                </div>
+              ) : submitStatus === 'error' ? (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+                  <p>Une erreur s&apos;est produite lors de l&apos;envoi de votre message. Veuillez réessayer ultérieurement.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
@@ -124,7 +144,7 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-2 text-gray-800 border border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
                   </div>
@@ -138,7 +158,7 @@ export default function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border text-gray-800 border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                         required
                       />
                     </div>
@@ -150,7 +170,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border text-gray-800 border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -164,7 +184,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-4 py-2 border text-gray-800 border-gray-500 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                       />
                     </div>
                     <div>
@@ -195,17 +215,17 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                       required
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={submitStatus === 'loading'}
                     className="w-full bg-blue-600 text-white font-medium py-3 px-4 rounded-lg hover:bg-blue-700 transition flex justify-center items-center"
                   >
-                    {isSubmitting ? (
+                    {submitStatus === 'loading' ? (
                       <>
                         <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>

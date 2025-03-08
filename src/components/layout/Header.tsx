@@ -23,19 +23,19 @@ export default function Header() {
 
         {/* Navigation desktop */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="font-medium text-gray-700 hover:text-orange-500 transition">
+          <Link href="/" className="font-extrabold text-gray-700 hover:text-orange-500 transition">
             Accueil
           </Link>
-          <Link href="/services" className="font-medium text-gray-700 hover:text-orange-500 transition">
+          <Link href="/services" className="font-extrabold text-gray-700 hover:text-orange-500 transition">
             Services
           </Link>
-          <Link href="/a-propos" className="font-medium text-gray-700 hover:text-orange-500 transition">
+          <Link href="/a-propos" className="font-extrabold text-gray-700 hover:text-orange-500 transition">
             À propos
           </Link>
-          <Link href="/portfolio" className="font-medium text-gray-700 hover:text-orange-500 transition">
+          <Link href="/portfolio" className="font-extrabold text-gray-700 hover:text-orange-500 transition">
             Portfolio
           </Link>
-          <Link href="/contact" className="font-medium text-gray-700 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
+          <Link href="/contact" className="font-extrabold text-gray-700 transition border-2 border-orange-500 rounded-lg px-4 py-1 hover:bg-orange-500 hover:text-white">
             Contact
           </Link>
         </nav>
