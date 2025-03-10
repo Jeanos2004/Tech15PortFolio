@@ -3,20 +3,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 pb-4 pt-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <div className="relative h-10 w-32">
             {/* Logo avec texte stylisé */}
             <span className="font-bold text-2xl">
-              <span className="text-blue-600">Tech</span>
-              <span className="text-orange-500">15</span>
-              <span className="text-gray-900">Vision</span>
+              <Image src={'/images/logo.jpg'} alt='Le logo de Tech 15 Vision' width={55} height={50}/>
             </span>
           </div>
         </Link>
