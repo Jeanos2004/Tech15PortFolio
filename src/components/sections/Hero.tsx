@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-purple-600 to-purple-200 text-white py-20" style={{ backgroundImage: 'url(/images/hero.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity : 0.9 }}>
+    <section className="relative bg-gradient-to-r from-purple-600 to-purple-200 text-white py-20" style={{ backgroundImage: 'url(/images/hero.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity : 0.9, backdropFilter: 'blur(10px) brightness(20px)' }}>
       <div className="container mx-auto px-4 py-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

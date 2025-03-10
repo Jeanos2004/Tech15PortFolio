@@ -22,7 +22,7 @@ export default function ServicesPage() {
       
       <div className="bg-amber-50 mx-auto px-12 py-16">
         {servicesData.map((service, index) => (
-          <div key={service.id} id={service.id} className={`mb-20 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} flex flex-col lg:flex-row items-center`}>
+          <div key={service.id} id={service.id} className={`mb-20 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} lg:flex lg:flex-col lg:flex-row items-center`}>
             <div className="lg:w-1/2 mb-8 lg:mb-0">
               <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
                 <Image 
